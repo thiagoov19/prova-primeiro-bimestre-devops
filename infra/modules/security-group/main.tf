@@ -1,6 +1,6 @@
-resource "aws_security_group" "web" {
-  name        = "${var.project_name}-web-sg"
-  description = "Acesso SSH e a API de reservas"
+resource "aws_security_group" "ec2" {
+  name        = "${var.project_name}-ec2-sg"
+  description = "SSH e API de reservas"
   vpc_id      = var.vpc_id
 
   ingress {
@@ -28,6 +28,24 @@ resource "aws_security_group" "web" {
   }
 
   tags = {
-    Name = "${var.project_name}-web-sg"
+    Name = "${var.project_name}-ec2-sg"
+  }
+}
+
+resource "aws_security_group" "rds" {
+  name        = "${var.project_name}-rds-sg"
+  description = "PostgreSQL somente a partir do SG da EC2"
+  vpc_id      = var.vpc_id
+
+  ingress {
+    description     = "PostgreSQL da EC2"
+    from_port       = 5432
+    to_port         = 5432
+    protocol        = "tcp"
+    security_groups = [aws_security_group.ec2.id]
+  }
+
+  tags = {
+    Name = "${var.project_name}-rds-sg"
   }
 }
