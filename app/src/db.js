@@ -1,4 +1,7 @@
-const { Pool } = require('pg');
+const { Pool, types } = require('pg');
+
+// devolve DATE como string YYYY-MM-DD, sem conversao de fuso
+types.setTypeParser(1082, v => v);
 
 const pool = new Pool({
   host: process.env.DB_HOST || 'localhost',
