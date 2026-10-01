@@ -7,21 +7,6 @@ resource "aws_db_subnet_group" "main" {
   }
 }
 
-resource "aws_db_parameter_group" "main" {
-  name   = "${var.project_name}-pg16"
-  family = "postgres16"
-
-  parameter {
-    name         = "rds.force_ssl"
-    value        = "0"
-    apply_method = "immediate"
-  }
-
-  tags = {
-    Name = "${var.project_name}-pg16"
-  }
-}
-
 resource "aws_db_instance" "main" {
   identifier        = "${var.project_name}-db"
   engine            = "postgres"
@@ -35,7 +20,6 @@ resource "aws_db_instance" "main" {
 
   db_subnet_group_name   = aws_db_subnet_group.main.name
   vpc_security_group_ids = [var.rds_sg_id]
-  parameter_group_name   = aws_db_parameter_group.main.name
 
   publicly_accessible     = false
   storage_encrypted       = true
