@@ -6,3 +6,4 @@ node_modules/
 *.pem
 crash.log
 *.tfvars
+tfplan
