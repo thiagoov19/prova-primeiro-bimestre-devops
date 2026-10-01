@@ -35,3 +35,19 @@ variable "app_port" {
   type        = number
   default     = 3000
 }
+
+variable "db_name" {
+  type    = string
+  default = "reservasdb"
+}
+
+variable "db_username" {
+  type    = string
+  default = "reservas"
+}
+
+variable "db_password" {
+  description = "Senha do RDS (passe via TF_VAR_db_password, nunca versionar)"
+  type        = string
+  sensitive   = true
+}

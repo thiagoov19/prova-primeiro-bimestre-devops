@@ -13,3 +13,13 @@ module "security_groups" {
   allowed_ssh_cidr = var.allowed_ssh_cidr
   app_port         = var.app_port
 }
+
+module "rds" {
+  source             = "./modules/rds"
+  project_name       = var.project_name
+  private_subnet_ids = module.vpc.private_subnet_ids
+  rds_sg_id          = module.security_groups.rds_sg_id
+  db_name            = var.db_name
+  db_username        = var.db_username
+  db_password        = var.db_password
+}
