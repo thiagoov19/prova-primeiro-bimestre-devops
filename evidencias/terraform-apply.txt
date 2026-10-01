@@ -1,0 +1,48 @@
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile" instead.
+Acquiring state lock. This may take a few moments...
+module.rds.aws_db_instance.main: Creating...
+module.rds.aws_db_instance.main: Still creating... [00m10s elapsed]
+module.rds.aws_db_instance.main: Still creating... [00m21s elapsed]
+module.rds.aws_db_instance.main: Still creating... [00m31s elapsed]
+module.rds.aws_db_instance.main: Still creating... [00m41s elapsed]
+module.rds.aws_db_instance.main: Still creating... [00m51s elapsed]
+module.rds.aws_db_instance.main: Still creating... [01m01s elapsed]
+module.rds.aws_db_instance.main: Still creating... [01m11s elapsed]
+module.rds.aws_db_instance.main: Still creating... [01m22s elapsed]
+module.rds.aws_db_instance.main: Still creating... [01m32s elapsed]
+module.rds.aws_db_instance.main: Still creating... [01m42s elapsed]
+module.rds.aws_db_instance.main: Still creating... [01m53s elapsed]
+module.rds.aws_db_instance.main: Still creating... [02m03s elapsed]
+module.rds.aws_db_instance.main: Still creating... [02m13s elapsed]
+module.rds.aws_db_instance.main: Still creating... [02m24s elapsed]
+module.rds.aws_db_instance.main: Still creating... [02m34s elapsed]
+module.rds.aws_db_instance.main: Still creating... [02m44s elapsed]
+module.rds.aws_db_instance.main: Still creating... [02m55s elapsed]
+module.rds.aws_db_instance.main: Still creating... [03m05s elapsed]
+module.rds.aws_db_instance.main: Still creating... [03m15s elapsed]
+module.rds.aws_db_instance.main: Still creating... [03m26s elapsed]
+module.rds.aws_db_instance.main: Still creating... [03m36s elapsed]
+module.rds.aws_db_instance.main: Still creating... [03m46s elapsed]
+module.rds.aws_db_instance.main: Still creating... [03m57s elapsed]
+module.rds.aws_db_instance.main: Still creating... [04m07s elapsed]
+module.rds.aws_db_instance.main: Still creating... [04m17s elapsed]
+module.rds.aws_db_instance.main: Still creating... [04m27s elapsed]
+module.rds.aws_db_instance.main: Still creating... [04m37s elapsed]
+module.rds.aws_db_instance.main: Still creating... [04m47s elapsed]
+module.rds.aws_db_instance.main: Still creating... [04m58s elapsed]
+module.rds.aws_db_instance.main: Still creating... [05m08s elapsed]
+module.rds.aws_db_instance.main: Creation complete after 5m18s [id=db-6NBLYOYRKK4XKMGS7PGZ57W44Y]
+module.ec2.aws_instance.api: Creating...
+module.ec2.aws_instance.api: Still creating... [00m11s elapsed]
+module.ec2.aws_instance.api: Creation complete after 16s [id=i-00f865f17be3b3d9a]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+api_url = "http://44.202.236.11:3000"
+ec2_public_ip = "44.202.236.11"
+rds_endpoint = "prova-reservas-db.cvrkvw242xvo.us-east-1.rds.amazonaws.com"
