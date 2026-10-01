@@ -30,7 +30,7 @@ Exemplo de corpo para criar uma reserva:
 
 
 json
-Copiar
+
 
 {
   "cliente": "João",
@@ -77,7 +77,7 @@ A API e o banco são executados pelo Docker Compose. O volume `pgdata` preserva 
 
 
 bash
-Copiar
+
 
 docker compose down
 
@@ -94,7 +94,6 @@ Para operar a infraestrutura, são necessárias credenciais temporárias válida
 
 
 bash
-Copiar
 
 cd infra
 export TF_VAR_db_password='SUBSTITUA_POR_UMA_SENHA_VALIDA'
@@ -109,7 +108,7 @@ Após validar os outputs e a aplicação, a infraestrutura de prova foi destruí
 
 
 bash
-Copiar
+
 
 terraform destroy
 
